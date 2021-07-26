@@ -1,0 +1,57 @@
+---
+title: "My first Markdown Report"
+author: "Kane"
+date: "7/26/2021"
+output:
+  pdf_document:
+    toc: yes
+  html_document:
+    toc: yes
+    toc_float: yes
+---
+
+# Hello world
+
+Today is my first day to write R Markdown.
+
+# My favourite library
+* tidyverse
+* plotly
+* ggplot2
+
+## Test sub 
+## R is cool.
+
+```{r firstchunk_name, echo =FALSE}
+head(mtcars,5)
+```
+
+# Graph
+
+```{r graph, echo = FALSE}
+library(ggplot2)
+ggplot(mtcars, aes(wt,hp))+
+  geom_point()
+```
+
+# My first linear regression model
+
+1. Summary dataset
+```{r Summary, echo = FALSE}
+summary(mtcars)
+```
+
+2. Build model
+```{r Model Test, echo = FALSE}
+model <- lm(mpg ~ wt + hp, data = mtcars)
+print(model)
+```
+
+# Bash shell
+```{bash test bash}
+ls -l
+```
+
+
+![My first pic.](Polynomial Regression.JPG)
+
